@@ -12,7 +12,7 @@ function Orders() {
   React.useEffect(() => {
     (async () => {
       try {
-        const { data } = await axios.get('/orders');
+        const { data } = await axios.get('https://61a1ca9f6c3b400017e69da0.mockapi.io/orders');
         setOrders(data.reduce((prev, obj) => [...prev, ...obj.items], []));
         setIsLoading(false);
       } catch (error) {
