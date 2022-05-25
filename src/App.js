@@ -23,7 +23,7 @@ function App() {
         const [cartResponse, favoritesResponse, itemsResponse] = await Promise.all([
           axios.get('/cart'),
           axios.get('/favorites'),
-          axios.get('/items'),
+          axios.get('https://61a1ca9f6c3b400017e69da0.mockapi.io/items'),
         ]);
 
         setIsLoading(false);
